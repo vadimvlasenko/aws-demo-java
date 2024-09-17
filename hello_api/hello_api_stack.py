@@ -1,21 +1,21 @@
-from aws_cdk import core as cdk
-from aws_cdk import aws_iam as iam
+import os
+
 from aws_cdk import (
     Stack,
     aws_lambda as _lambda,
     aws_apigateway as apigw,
-    Environment
+    Environment,
+    IAspect
 )
-from constructs import Construct
-from typing import Any
-import os
+from aws_cdk import aws_iam as iam
+from constructs import Construct, IConstruct
 
 
-class PermissionBoundaryAspect(cdk.IAspect):
+class PermissionBoundaryAspect(IAspect):
     def __init__(self, permission_boundary_arn: str):
         self.permission_boundary_arn = permission_boundary_arn
 
-    def visit(self, node: cdk.IConstruct):
+    def visit(self, node: IConstruct):
         if isinstance(node, iam.Role):
             node.add_permission_boundary(iam.ManagedPolicy.from_managed_policy_arn(
                 node, "PermissionBoundary", self.permission_boundary_arn))
