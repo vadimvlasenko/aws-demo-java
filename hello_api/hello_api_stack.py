@@ -4,8 +4,8 @@ from aws_cdk import (
     aws_apigateway as apigw,
     Environment
 )
-import os
 from constructs import Construct
+import os
 
 class HelloApiStack(Stack):
 
