@@ -2,13 +2,19 @@ from aws_cdk import (
     Stack,
     aws_lambda as _lambda,
     aws_apigateway as apigw,
+    Environment
 )
+import os
 from constructs import Construct
 
 class HelloApiStack(Stack):
 
     def __init__(self, scope: Construct, id: str, **kwargs) -> None:
-        super().__init__(scope, id, **kwargs)
+        env = Environment(
+            account=os.environ["CDK_DEFAULT_ACCOUNT"],
+            region=os.environ["CDK_DEFAULT_REGION"]
+        )
+        super().__init__(scope, id, env=env, **kwargs)
 
         # Define the Lambda function
         hello_lambda = _lambda.Function(
