@@ -5,7 +5,8 @@ from aws_cdk import (
     aws_lambda as _lambda,
     aws_apigateway as apigw,
     Environment,
-    IAspect
+    IAspect,
+    Aspects
 )
 from aws_cdk import aws_iam as iam
 from constructs import Construct, IConstruct
@@ -30,7 +31,7 @@ class HelloApiStack(Stack):
         )
         super().__init__(scope, id, env=env, **kwargs)
         permission_boundary_arn = "arn:aws:iam::025066278959:policy/eo_role_boundary"
-        cdk.Aspects.of(self).add(PermissionBoundaryAspect(permission_boundary_arn))
+        Aspects.of(self).add(PermissionBoundaryAspect(permission_boundary_arn))
         # Define the Lambda function
         hello_lambda = _lambda.Function(
             self, 'HelloHandler',
