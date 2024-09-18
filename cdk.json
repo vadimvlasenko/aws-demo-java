@@ -1,8 +1,3 @@
 {
-  "app": "python3 app.py",
-  "context": {
-    "@aws-cdk/core:permissionsBoundary": {
-      "name": "eo_role_boundary"
-    }
-  }
+  "app": "python3 app.py"
 }
