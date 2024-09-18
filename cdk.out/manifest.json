@@ -1,0 +1,131 @@
+{
+  "version": "15.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "HelloApiStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "HelloApiStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "HelloApiStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://127214182084/us-east-1",
+      "properties": {
+        "templateFile": "HelloApiStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::127214182084:role/cdk-hnb659fds-deploy-role-127214182084-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::127214182084:role/cdk-hnb659fds-cfn-exec-role-127214182084-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-127214182084-us-east-1/6fcb40c02d9555f38d0f5603601fee1d79b8421696cca670986f4c4b530e5481.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "HelloApiStack.assets"
+        ]
+      },
+      "dependencies": [
+        "HelloApiStack.assets"
+      ],
+      "metadata": {
+        "/HelloApiStack/HelloHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHandlerServiceRole11EF7C63"
+          }
+        ],
+        "/HelloApiStack/HelloHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHandler2E4FBA4D"
+          }
+        ],
+        "/HelloApiStack/HelloApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApi3F989F66"
+          }
+        ],
+        "/HelloApiStack/HelloApi/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApiCloudWatchRoleDEA499C9"
+          }
+        ],
+        "/HelloApiStack/HelloApi/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApiAccount27279CFF"
+          }
+        ],
+        "/HelloApiStack/HelloApi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApiDeployment955828081180ee41ff153b9e9de4b691e4760156"
+          }
+        ],
+        "/HelloApiStack/HelloApi/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApiDeploymentStageprodE85054A7"
+          }
+        ],
+        "/HelloApiStack/HelloApi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApiEndpoint91438085"
+          }
+        ],
+        "/HelloApiStack/HelloApi/Default/hello/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApihello0292B1E3"
+          }
+        ],
+        "/HelloApiStack/HelloApi/Default/hello/GET/ApiPermission.HelloApiStackHelloApi3F172A8D.GET..hello": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApihelloGETApiPermissionHelloApiStackHelloApi3F172A8DGEThelloF616E8CA"
+          }
+        ],
+        "/HelloApiStack/HelloApi/Default/hello/GET/ApiPermission.Test.HelloApiStackHelloApi3F172A8D.GET..hello": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApihelloGETApiPermissionTestHelloApiStackHelloApi3F172A8DGEThello0DAA40E0"
+          }
+        ],
+        "/HelloApiStack/HelloApi/Default/hello/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApihelloGET34B3ECE0"
+          }
+        ],
+        "/HelloApiStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/HelloApiStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/HelloApiStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "HelloApiStack"
+    }
+  }
+}

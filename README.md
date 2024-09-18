@@ -11,7 +11,6 @@ This project contains a Python CDK stack that defines an API Gateway with a `/he
 ## Project Structure
 
 ```plaintext
-aws-cdk-python-project/
 ├── README.md
 ├── app.py
 ├── cdk.json
