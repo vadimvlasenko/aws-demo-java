@@ -23,7 +23,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::127214182084:role/cdk-hnb659fds-deploy-role-127214182084-us-east-1",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::127214182084:role/cdk-hnb659fds-cfn-exec-role-127214182084-us-east-1",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-127214182084-us-east-1/6fcb40c02d9555f38d0f5603601fee1d79b8421696cca670986f4c4b530e5481.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-127214182084-us-east-1/ea0c97fb1f9d192f8b2da22bcbe7bb29b723c54cb8c818ae9b28b230ce80fe8a.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -44,6 +44,30 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "HelloHandler2E4FBA4D"
+          }
+        ],
+        "/HelloApiStack/GetEmployeesHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetEmployeesHandlerServiceRoleD6C324E3"
+          }
+        ],
+        "/HelloApiStack/GetEmployeesHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetEmployeesHandlerBF205BF9"
+          }
+        ],
+        "/HelloApiStack/PostEmployeeHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PostEmployeeHandlerServiceRole8CF7D159"
+          }
+        ],
+        "/HelloApiStack/PostEmployeeHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PostEmployeeHandler7E12FBDB"
           }
         ],
         "/HelloApiStack/HelloApi/Resource": [
@@ -67,7 +91,7 @@
         "/HelloApiStack/HelloApi/Deployment/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "HelloApiDeployment955828081180ee41ff153b9e9de4b691e4760156"
+            "data": "HelloApiDeployment955828089dc63db3cb8009cd651bd8a4a45371be"
           }
         ],
         "/HelloApiStack/HelloApi/DeploymentStage.prod/Resource": [
@@ -104,6 +128,54 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "HelloApihelloGET34B3ECE0"
+          }
+        ],
+        "/HelloApiStack/HelloApi/Default/employees/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApiemployeesC7A530C8"
+          }
+        ],
+        "/HelloApiStack/HelloApi/Default/employees/GET/ApiPermission.HelloApiStackHelloApi3F172A8D.GET..employees": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApiemployeesGETApiPermissionHelloApiStackHelloApi3F172A8DGETemployees075AB8F2"
+          }
+        ],
+        "/HelloApiStack/HelloApi/Default/employees/GET/ApiPermission.Test.HelloApiStackHelloApi3F172A8D.GET..employees": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApiemployeesGETApiPermissionTestHelloApiStackHelloApi3F172A8DGETemployeesAB38A822"
+          }
+        ],
+        "/HelloApiStack/HelloApi/Default/employees/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApiemployeesGETB3673234"
+          }
+        ],
+        "/HelloApiStack/HelloApi/Default/employee/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApiemployee2F1567C6"
+          }
+        ],
+        "/HelloApiStack/HelloApi/Default/employee/POST/ApiPermission.HelloApiStackHelloApi3F172A8D.POST..employee": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApiemployeePOSTApiPermissionHelloApiStackHelloApi3F172A8DPOSTemployee187B3A0D"
+          }
+        ],
+        "/HelloApiStack/HelloApi/Default/employee/POST/ApiPermission.Test.HelloApiStackHelloApi3F172A8D.POST..employee": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApiemployeePOSTApiPermissionTestHelloApiStackHelloApi3F172A8DPOSTemployeeECDBB9E5"
+          }
+        ],
+        "/HelloApiStack/HelloApi/Default/employee/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApiemployeePOSTA909D5E2"
           }
         ],
         "/HelloApiStack/CDKMetadata/Default": [
